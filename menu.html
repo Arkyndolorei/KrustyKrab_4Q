@@ -11,7 +11,7 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
   body {
-       background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/7/70/Krusty_Krab_interior_50b.png/250px-Krusty_Krab_interior_50b.png');
+       background-image: url('https://static.wikia.nocookie.net/spongebob/images/b/b6/Krusty_Krab_Interior.png/revision/latest?cb=20230612105716');
    background-size: cover;
     background-size: cover;
     background-position: center;
@@ -212,6 +212,10 @@
 }
 
 
+.cart-content {
+    background: transparent;
+}
+
 .checkout-btn {
     background: rgb(31, 184, 255);
     color: rgb(255, 236, 66);
@@ -281,21 +285,20 @@
     </div>
 </section>
 
-
-
+  <section class="cart-section" id="order">
+  <div class="cart-content">
     <div class="cart-header">
         <h2>🛒 Your Order</h2>
     </div>
     
-    <div class="cart-content">
-      <section class="cart-section" id="order">
+    
         <ul id="cartList" class="cart-list"></ul>
         <div class="cart-empty" id="emptyMsg">Your cart is empty, sailor!</div>
         
         <div class="cart-total">
             <span>Total:</span>
             <span class="total-amount">$<span id="total">0.00</span></span>
-        </div>
+    
     </div>
     
     <form id="checkoutForm" action="http://52.74.133.173/cs3/checkout.php" method="GET" onsubmit="return prepareOrder()">
@@ -312,6 +315,7 @@
         </div>
         <input type="hidden" name="cust_order" id="cust_order">
         <button type="submit" class="checkout-btn">Place Order</button>
+          </div>
     </form>
 </section>
 
