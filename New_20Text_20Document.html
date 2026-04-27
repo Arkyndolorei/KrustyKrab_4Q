@@ -1,0 +1,505 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<title>Krusty Krab</title>
+
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  
+
+<body>
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="menu.html">Menu</a>
+    <a href="#order">Order Now!</a>
+</div>
+<div class="logo1">
+        <img src="https://static.wikia.nocookie.net/logopedia/images/8/8a/KK_main_logo.png/revision/latest?cb=20250125082603" alt="Krusty Krab Logo">
+    </div>
+<div class="logo">
+    <img src="https://static.wikia.nocookie.net/logopedia/images/8/8a/KK_main_logo.png/revision/latest?cb=20250125082603" alt="Krusty Krab Logo">
+</div>
+
+<h1 class="title">Hey sailor, welcome!!!!!</h1>
+<p class="subtitle">🫧 We had 20% discount by the way</p>
+
+<div class="square">
+    <h1 style="color:red">Mr Krabs</h1>
+    <p>Owner of Krusty Krab</p>
+    <p>"SpongeBoy me Bob!"</p>
+    <img src="https://static.wikia.nocookie.net/spongebob/images/7/7b/Krabs_artwork.png/revision/latest/scale-to-width-down/1000?cb=20220807045807" class="mrkrabs" alt="Mr Krabs">
+</div>
+
+<section id="menu">
+    <h2 class="section-title">🌊 Gallery Grub</h2>
+<div class="krustylist">
+ <h2 class="section-title">Best Sellers</h2>
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/heroism/images/f/fa/Krabby_Patty.jpg">
+        <h3>Krabby Patty - $1.25</h3>
+        <button onclick="addToCart('Krabby Patty', 1.25)">Add to Cart</button>
+    </div>
+
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/8/82/PrettyPatties.jpg">
+        <h3>Pretty Patty - $2.50</h3>
+        <button onclick="addToCart('Pretty Patty', 2.50)">Add to Cart</button>
+    </div>
+
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/0/05/Mermaid_Man_and_Barnacle_Boy_V_023.png">
+        <h3>Pipsqueak Patty - $1.00</h3>
+        <button onclick="addToCart('Pipsqueak Patty', 1.00)">Add to Cart</button>
+    </div>
+
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/8/84/Pressure_086.png">
+        <h3>Double Deluxe - $3.25</h3>
+        <button onclick="addToCart('Double Deluxe', 3.25)">Add to Cart</button>
+    </div>
+
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/2/2a/Just_One_Bite_003.png">
+        <h3>King-Size Ultra Krabby Supreme - $1.25</h3>
+        <button onclick="addToCart('King-Size Ultra Krabby Supreme', 1.25)">Add to Cart</button>
+    </div>
+ <h2 class="section-title">Burgers</h2>
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/4/4e/We_serve_food_here_sir.png">
+        <h3>Double Triple Bossy Deluxe - $2.50</h3>
+        <button onclick="addToCart('Double Triple Bossy Deluxe', 2.50)">Add to Cart</button>
+    </div>
+
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/b/bf/Ice_cream_Krabby_Patty.jpg">
+        <h3>Triple Krabby Patty w/ 5 Scoops of Ice Cream - $1.00</h3>
+        <button onclick="addToCart('Triple Krabby Patty w/ 5 Scoops of Ice Cream', 1.00)">Add to Cart</button>
+    </div>
+
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/0/02/Jelly_Patty.png">
+        <h3>Jelly Patty - $3.25</h3>
+        <button onclick="addToCart('Jelly Patty', 3.25)">Add to Cart</button>
+    </div>
+
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/2/22/Pickles_013.png">
+        <h3>Crying Johnny - $1.25</h3>
+        <button onclick="addToCart('Crying Johnny', 1.25)">Add to Cart</button>
+    </div>
+
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/1/1b/Pat_No_Pay_018.png">
+        <h3>Krabby Patty with Extra Cheese - $2.50</h3>
+        <button onclick="addToCart('Krabby Patty with Extra Cheese', 2.50)">Add to Cart</button>
+    </div>
+ <h2 class="section-title">Fried-Oilay</h2>
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/4/40/French_fries.jpeg">
+        <h3>Fries Patty - $1.00</h3>
+        <button onclick="addToCart('Fries Patty', 1.00)">Add to Cart</button>
+    </div>
+
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/7/7f/Kelp_Fries.jpeg">
+        <h3>Kelp Fries - $3.25</h3>
+        <button onclick="addToCart('Kelp Fries', 3.25)">Add to Cart</button>
+    </div>
+
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/7/7e/Coral_Bits_HD.PNG">
+        <h3>Coral Bits - $1.25</h3>
+        <button onclick="addToCart('Coral Bits', 1.25)">Add to Cart</button>
+    </div>
+
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/4/45/Patrick%27s_Staycation_009.png">
+        <h3>Hash Brown - $2.50</h3>
+        <button onclick="addToCart('Hash Brown', 2.50)">Add to Cart</button>
+    </div>
+
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/4/4c/Mermaid_Man_vs._SpongeBob_013.png">
+        <h3>Krusty Kid's Meal - $1.00</h3>
+        <button onclick="addToCart('Krusty Kid\'s Meal', 1.00)">Add to Cart</button>
+    </div>
+ <h2 class="section-title">Die-Eat</h2>
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/5/5b/Yours%2C_Mine_and_Mine_014.png">
+        <h3>Kiddie Meal Single - $3.25</h3>
+        <button onclick="addToCart('Kiddie Meal Single', 3.25)">Add to Cart</button>
+    </div>
+
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/8/8a/Near-Mint_Plankton_162.png">
+        <h3>Triple Tryptophan Turkey Krabby Patty - $3.25</h3>
+        <button onclick="addToCart('Triple Tryptophan Turkey Krabby Patty', 3.25)">Add to Cart</button>
+    </div>
+
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/2/27/Kooky_Cooks_094.png">
+        <h3>Ew Salad - $3.25</h3>
+        <button onclick="addToCart('Ew Salad', 3.25)">Add to Cart</button>
+    </div>
+
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/e/e6/The_Goobfather_011.png">
+        <h3>Patty Whip! - $3.25</h3>
+        <button onclick="addToCart('Patty Whip!', 3.25)">Add to Cart</button>
+    </div>
+
+    <div class="krustyitem">
+        <img src="https://static.wikia.nocookie.net/spongebob/images/5/5f/Krusty_Krab_Pizza.png">
+        <h3>Krusty Krab Pizza - $3.25</h3>
+        <button onclick="addToCart('Krusty Krab Pizza', 3.25)">Add to Cart</button>
+    </div>
+
+</div>
+
+
+<section class="cart-section" id="order">
+    <div class="cart-header">
+        <h2>🛒 Your Order</h2>
+    </div>
+    
+    <div class="cart-content">
+        <ul id="cartList" class="cart-list"></ul>
+        <div class="cart-empty" id="emptyMsg">Hmmm nothing? That's boring... 🦦</div>
+        
+        <div class="cart-total">
+            <span>Total:</span>
+            <span class="total-amount">$<span id="total">0.00</span></span>
+        </div>
+    </div>
+    
+  <form id="checkoutForm" 
+      action="http://52.74.133.173/cs3/checkout.php" 
+      method="POST" 
+      onsubmit="return prepareOrder()">
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" name="cust_name" placeholder="Your Name" required>
+            </div>
+      </div>
+            <div class="form-group">
+                <input type="email" name="cust_email" placeholder="Email Address" required>
+            </div>
+        </div>
+        <div class="form-group full">
+            <input type="text" name="cust_addr" placeholder="Delivery Address" required>
+        </div>
+             <input type="hidden" name="cust_order" id="cust_order">
+        <button type="submit" class="checkout-btn">Place Order</button>
+    </form>
+</section>
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
+  body {
+       background-image: url('https://static.wikia.nocookie.net/spongebob/images/b/b6/Krusty_Krab_Interior.png/revision/latest?cb=20230612105716');
+   background-size: cover;
+    background-size: cover;
+    background-position: center;
+    font-family: "Slackey", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+.logo1 {
+    position: absolute;
+    height: 150px;
+    top: 0;
+    left: 20px;
+}
+
+.logo1 img {
+    height: 250px;
+}
+
+.navbar {
+    background-color: rgb(31, 184, 255);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.navbar a {
+    color: rgb(255, 236, 66);
+    text-decoration: none;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 0px 0px 8px black;
+}
+
+.navbar a:hover {
+    background-color: rgb(10, 138, 197);
+    border-radius: 8px;
+}
+
+
+.logo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo img {
+    width: 280px;
+}
+.mrkrabs{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top:15px;
+}
+
+.title, .subtitle, .section-title {
+    text-align: center;
+    color: rgb(255, 236, 66);
+    text-shadow: 0px 0px 10px black;
+}
+
+
+.square {
+    background-color: rgba(31, 184, 255, 0.9);
+    padding: 20px;
+    max-width: 500px;
+    margin: 30px auto;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 15px black;
+}
+
+
+.krustylist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 30px;
+    justify-content: center;
+}
+
+
+.krustyitem {
+    background: white;
+    padding: 15px;
+    width: 260px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 12px black;
+    transition: transform 0.2s;
+}
+
+.krustyitem:hover {
+    transform: scale(1.05);
+}
+
+.krustyitem img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.krustyitem button {
+    background: rgb(255, 236, 66);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "DynaPuff", cursive;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+    box-shadow: 0px 0px 8px black;
+}
+
+.krustyitem button:hover {
+    background: rgb(255, 200, 0);
+}
+
+
+.cart-section {
+    background: rgba(255, 255, 255, 0.95);
+    max-width: 900px;
+    margin: 40px auto;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 0 15px black;
+}
+
+.cart-header h2 {
+    color: rgb(31, 184, 255);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-content {
+    background: #fdfdfd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px dashed #ccc;
+}
+
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(31, 184, 255);
+}
+
+
+#checkoutForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgb(31, 184, 255);
+    border-radius: 10px;
+    font-family: "DynaPuff", cursive;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: rgb(255, 236, 66);
+    background: #fffef0;
+}
+
+
+.checkout-btn {
+    background: rgb(31, 184, 255);
+    color: rgb(255, 236, 66);
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-family: "DynaPuff", cursive;
+    box-shadow: 0px 0px 10px black;
+}
+
+.checkout-btn:hover {
+    background: rgb(10, 138, 197);
+}
+</style>
+  </head>
+  
+<script>
+let cart = [];
+
+function addToCart(name, price) {
+    cart.push({
+        prod_name: name,
+        prod_price: price
+    });
+    displayCart();
+}
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    displayCart();
+}
+
+function displayCart() {
+    const list = document.getElementById("cartList");
+    const totalEl = document.getElementById("total");
+    const emptyMsg = document.getElementById("emptyMsg");
+    
+    list.innerHTML = "";
+    
+    if (cart.length === 0) {
+        emptyMsg.style.display = "block";
+    } else {
+        emptyMsg.style.display = "none";
+    }
+    
+    cart.forEach((item, index) => {
+        let li = document.createElement("li");
+        li.innerHTML = `
+            <span>${item.prod_name} - $${item.prod_price.toFixed(2)}</span>
+            <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
+        `;
+        list.appendChild(li);
+    });
+    
+    let total = cart.reduce((sum, item) => sum + item.prod_price, 0);
+    totalEl.textContent = total.toFixed(2);
+}
+
+function prepareOrder() {
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return false; 
+    }
+    document.getElementById("cust_order").value = JSON.stringify(cart);
+    return true;
+
+
+    document.querySelectorAll('.dynamic-field').forEach(el => el.remove());
+
+    const form = document.getElementById("checkoutForm");
+    
+    cart.forEach((item, index) => {
+        let nameInput = document.createElement("input");
+        nameInput.type = "hidden";
+        nameInput.name = `items[${index}][name]`;
+        nameInput.value = item.prod_name;
+        nameInput.className = "dynamic-field";
+        form.appendChild(nameInput);
+
+        let priceInput = document.createElement("input");
+        priceInput.type = "hidden";
+        priceInput.name = `items[${index}][price]`;
+        priceInput.value = item.prod_price;
+        priceInput.className = "dynamic-field";
+        form.appendChild(priceInput);
+    });
+
+    let total = cart.reduce((sum, item) => sum + item.prod_price, 0);
+    let totalInput = document.createElement("input");
+    totalInput.type = "hidden";
+    totalInput.name = "total";
+    totalInput.value = total.toFixed(2);
+    totalInput.className = "dynamic-field";
+    form.appendChild(totalInput);
+
+    return true;
+}
+
+displayCart();
+  </script>
+</body>
+</html>
