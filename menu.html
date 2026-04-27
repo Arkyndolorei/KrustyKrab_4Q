@@ -441,7 +441,6 @@ function displayCart() {
     const emptyMsg = document.getElementById("emptyMsg");
     
     list.innerHTML = "";
-    
     if (cart.length === 0) {
         emptyMsg.style.display = "block";
     } else {
@@ -466,19 +465,11 @@ function prepareOrder() {
         alert("Your cart is empty!");
         return false; 
     }
-
-    const orderData = JSON.stringify(cart);
     document.getElementById("cust_order").value = orderData;
-
-    console.log("Sending order:", orderData); // debug check
-
+    console.log("Sending (GET):", orderData);
     return true;
 }
-  function updatehidden() {
-    document.getElementById("cust_order").value = JSON.stringify(cart);
-  }
-
 displayCart();
-  </script>
+</script>
 </body>
 </html>
