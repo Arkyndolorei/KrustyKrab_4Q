@@ -126,10 +126,15 @@ function prepareOrder() {
         return false;
     }
 
-    const orderData = encodeURIComponent(JSON.stringify(cart));
-    document.getElementById("cust_order").value = orderData;
+    const name = encodeURIComponent(document.querySelector('[name="cust_name"]').value);
+    const email = encodeURIComponent(document.querySelector('[name="cust_email"]').value);
+    const addr = encodeURIComponent(document.querySelector('[name="cust_addr"]').value);
+    const order = encodeURIComponent(JSON.stringify(cart));
+    const url = `http://52.74.133.173/cs3/checkout.php?cust_name=${name}&cust_email=${email}&cust_addr=${addr}&cust_order=${order}`;
+    console.log("Redirecting to:", url);
+    window.location.href = url;
 
-    return true;
+    return false; 
 }
 
 displayCart();
