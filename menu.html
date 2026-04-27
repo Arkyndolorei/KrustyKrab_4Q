@@ -465,6 +465,7 @@ function prepareOrder() {
         alert("Your cart is empty!");
         return false; 
     }
+      const orderData = encodeURIComponent(JSON.stringify(cart));
     document.getElementById("cust_order").value = orderData;
     console.log("Sending (GET):", orderData);
     return true;
