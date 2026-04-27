@@ -177,23 +177,26 @@
     
   <form id="checkoutForm" 
       action="http://52.74.133.173/cs3/checkout.php" 
-      method="GET" 
+      method="POST" 
       onsubmit="return prepareOrder()">
-        <div class="form-row">
-            <div class="form-group">
-                <input type="text" name="cust_name" placeholder="Your Name" required>
-            </div>
-      </div>
-            <div class="form-group">
-                <input type="email" name="cust_email" placeholder="Email Address" required>
-            </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <input type="text" name="cust_name" placeholder="Your Name" required>
         </div>
-        <div class="form-group full">
-            <input type="text" name="cust_addr" placeholder="Delivery Address" required>
+        <div class="form-group">
+            <input type="email" name="cust_email" placeholder="Email Address" required>
         </div>
-             <input type="hidden" name="cust_order" id="cust_order">
-        <button type="submit" class="checkout-btn">Place Order</button>
-    </form>
+    </div>
+
+    <div class="form-group full">
+        <input type="text" name="cust_addr" placeholder="Delivery Address" required>
+    </div>
+
+    <input type="hidden" name="cust_order" id="cust_order">
+
+    <button type="submit" class="checkout-btn">Place Order</button>
+</form>
 </section>
 <style>
    @import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
@@ -464,7 +467,11 @@ function prepareOrder() {
         return false; 
     }
 
-    document.getElementById("cust_order").value = JSON.stringify(cart);
+    const orderData = JSON.stringify(cart);
+    document.getElementById("cust_order").value = orderData;
+
+    console.log("Sending order:", orderData); // debug check
+
     return true;
 }
   function updatehidden() {
