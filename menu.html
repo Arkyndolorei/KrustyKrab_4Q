@@ -159,7 +159,10 @@
 
 </div>
 
-
+  <form id="checkoutForm" 
+      action="http://52.74.133.173/cs3/checkout.php" 
+      method="GET" 
+      onsubmit="return prepareOrder()">
 <section class="cart-section" id="order">
     <div class="cart-header">
         <h2>🛒 Your Order</h2>
@@ -175,10 +178,7 @@
         </div>
     </div>
     
-  <form id="checkoutForm" 
-      action="http://52.74.133.173/cs3/checkout.php" 
-      method="POST" 
-      onsubmit="return prepareOrder()">
+
 
     <div class="form-row">
         <div class="form-group">
